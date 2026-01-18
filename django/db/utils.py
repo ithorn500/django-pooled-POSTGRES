@@ -169,6 +169,7 @@ class ConnectionHandler(BaseConnectionHandler):
             conn.setdefault("CONN_HEALTH_CHECKS", False)
             conn.setdefault("OPTIONS", {})
             conn.setdefault("TIME_ZONE", None)
+            conn.setdefault("DISABLE_SERVER_SIDE_CURSORS", True)
             for setting in ["NAME", "USER", "PASSWORD", "HOST", "PORT"]:
                 conn.setdefault(setting, "")
 
